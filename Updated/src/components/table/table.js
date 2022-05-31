@@ -7,7 +7,7 @@ const data = (props) => {
   return (
 
     <Card className="expenses">
-     {props.items.map(expenses => <TableItem id={expenses.id}firstName={expenses.firstName}lastName={expenses.lastName}  />)}
+     {props.items.map((expenses) => <TableItem key={expenses.id} id={expenses.id}firstName={expenses.firstName}lastName={expenses.lastName}  />)}
     </Card>
   );
 }

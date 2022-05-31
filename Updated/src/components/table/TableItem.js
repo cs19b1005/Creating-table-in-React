@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import Card from '../UI/Card';
 import './TableItem.css';
 import "./Modal.css";
+import Button from '../UI/Button';
 let a="hai";
 const TableItem = (props) => {
   a=props.firstName+' '+props.lastName;
@@ -13,9 +14,9 @@ const TableItem = (props) => {
         <h2>{props.id}</h2>
         <h2>{props.firstName}</h2>
         <h2>{props.lastName}</h2>
-        <button className="openModalBtn" onClick={() => { setModalOpen(true);}} >
-           Action
-        </button>  {modalOpen && <Modal  setOpenModal ={setModalOpen} />}
+        <Button className="openModalBtn" onClick={() => { setModalOpen(true);}} >
+           View Details
+        </Button>  {modalOpen && <Modal  setOpenModal ={setModalOpen} />}
       </div>
     </Card>
   );
